@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div id="test"> Hello I will be triggered by javascript</div>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+    <script>
+/*         document.getElementById('test').innerHTML = "Hello World by Javascript" */
+        /* function hide() {
+            document.getElementById('test').style.display = "none";
+        }
+        function show() {
+            document.getElementById('test').style.display = "block";
+        } */
+/*         $(document).ready(function() {
+            $('#test').text('Hello World by jquery')
+        }) */
+        $(document).ready(function() {
+            $('#hide').click(function() {
+                $('#test').hide();
+            })
+            $('#show').click(function() {
+                $('#test').show();
+            })
+        })
+    </script>
+</body>
+</html>

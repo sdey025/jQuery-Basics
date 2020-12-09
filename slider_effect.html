@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <style>
+        .topcard {
+            background-color: lightblue;
+            border: 1px solid black;
+            padding: 0px 3px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .toggle {
+            padding: 40px;
+            display: none;
+            text-align: center;
+            background-color: lightgoldenrodyellow;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topcard">
+        <h4>Click to open toggle !!</h4>
+    </div>
+    <div class="toggle">
+        <p>Hello i am a simple toggle !!!</p>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('.topcard').click(function () {
+                $('.toggle').slideDown('slow')
+                $('p').fadeIn('slow')
+            })
+            $('.topcard').dblclick(function(){
+                $('.toggle').slideUp('slow')
+                $('p').fadeOut('fast')
+            })
+        })
+    </script>
+</body>
+
+</html>

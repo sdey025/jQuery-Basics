@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti consequuntur assumenda numquam voluptates delectus. Vitae officia possimus sint eum minus illo nostrum nesciunt perspiciatis sequi laboriosam aliquam architecto voluptatem, pariatur laudantium facilis! Aperiam pariatur eum excepturi amet ullam consequatur reiciendis!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, explicabo aliquid quos fugit dicta quo repudiandae optio commodi, sint dolores, veniam qui libero mollitia fugiat vero corporis minima iusto cupiditate doloribus magnam aut. Ratione unde aliquid numquam ipsum placeat maiores.</p>
+    <br>
+    <ul>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab tenetur est, ex exercitationem nulla, eligendi beatae tempore sed, temporibus non omnis id sequi aliquam iste repudiandae amet voluptatum incidunt.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab tenetur est, ex exercitationem nulla, eligendi beatae tempore sed, temporibus non omnis id sequi aliquam iste repudiandae amet voluptatum incidunt.</li>
+    </ul>
+    <button id="btn">hide paragraph</button>
+    <button id="btn1">show paragraph</button>
+    <button id="btn2">hide list</button>
+    <button id="btn3">show list</button>
+    <button id="btn4">hide first list</button>
+    <button id="btn5">hide last list</button>
+    <script>
+        $(document).ready(function() {
+            $("#btn").click(function() {
+                $('p').hide()
+            })
+            $('#btn1').click(function() {
+                $('p').show()
+            })
+            $('#btn2').click(function() {
+                $('li').hide()
+            })
+            $('#btn3').click(function() {
+                $('li').show()
+            })
+            $('#btn4').click(function() {
+                $('li:first').hide()
+            })
+            $('#btn5').click(function() {
+                $('li:last').hide()
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <ol type="1">
+        <li>Index 0: Javascript</li> 
+        <li>Index 1: Angular</li> 
+        <li>Index 2: VueJS</li> 
+        <li>Index 3: ReactJS</li> 
+        <li>Index 4: PHP</li>   
+    </ol>
+    <ol type="1" id="index">
+        <li>Index 0: C</li> 
+        <li>Index 1: C++</li> 
+        <li>Index 2: JAVA</li> 
+        <li>Index 3: Python</li> 
+        <li>Index 4: Perl</li>   
+    </ol>
+
+    <button id="btn">click me</button>
+    <script>
+        $(document).ready(function() {
+            $('#btn').click(function() {
+                $('*').css({  //* is called universal selector
+                'backgroundColor': 'blue',
+                'transition':'0.7s'
+                })
+                $(this).css({  // this refers to the selector where the parent selector
+                    'backgroundColor': 'green',
+                    'transition': '0.7s'
+                })
+               // $('[type]').hide("slow") //this is how we call attributes in jquery
+               $('li:even').css({
+                   'color': 'red',
+                   'transition': '0.7s'
+               })
+               $('li:odd').css({
+                   'color': 'green',
+                   'transition': '0.7s'
+               })
+               $('li:first-child').css({
+                   'fontSize': '20px'
+               })
+               $('#index li:last-child').css({
+                   'fontSize': '25px'
+               })
+               $('#index li:nth-child(3)').css({
+                   'fontSize': '25px',
+                   'color': 'white',
+               })
+               $('#index li:nth-last-child(2)').css({ // this will start the count from last
+                   'color':'grey',
+                   'fontSize': '25px',
+               })
+            })
+        })
+    </script>
+</body>
+</html>

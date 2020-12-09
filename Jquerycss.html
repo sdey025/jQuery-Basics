@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <a href="#" id="anchor">Click the button to remove the underline</a><br>
+    <a href="#" id="anchor2">Multiple css will be used here</a><br>
+    <button id="r_underline">Remove underline</button>
+    <script>
+        $(document).ready(function() {
+            $('#r_underline').click(function() {
+                $('#anchor').css('textDecoration','none') //this is for single css
+                $('#anchor2').css({ // this is for Multiple css styles
+                    'fontSize':'25px',
+                    'fontFamily':'Helvetica',
+                    'color': '#000000',
+                    'lineHeight':'40px',
+                    'marginLeft':'auto',
+                    'transition':'.7s',
+                    'textDecoration':'none',
+                    'textAlign':'right',
+                    'display':'flex'
+                })
+            })
+        })
+    </script>
+</body>
+</html>

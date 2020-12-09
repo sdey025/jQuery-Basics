@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <form>
+        <label>Username</label>
+        <input type="text" id="first" name="username" placeholder="i will work on keypress"/><br>
+        <label>Username</label>
+        <input type="text" id="second" name="username" placeholder="i will work on keydown"/><br>
+        <label>Username</label>
+        <input type="text" id="third" name="username" placeholder="i will work on keyup"/><br>
+    </form>
+    <script>
+        $(document).ready(function(){
+            $('#first').keypress(function(){
+                $(this).css({
+                    'backgroundColor':'blue'
+                })
+            })
+            $('#second').keydown(function(){
+                $(this).css({
+                    'backgroundColor':'pink'
+                })
+            })
+            $('#third').keyup(function(){
+                $(this).css({
+                    'backgroundColor':'yellow'
+                })
+            })
+        })
+    </script>
+</body>
+</html>
