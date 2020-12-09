@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <style>
+        .container{
+            margin:0px 40px; 
+            padding:0px 40px; 
+        }
+        .boxes{
+            background-color: red;
+            width: 100%;
+            height: 50px;
+            margin: 20px;
+        }
+        .boxes2{
+            background-color: green;
+            width: 100%;
+            height: 50px;
+            margin: 20px;
+        }
+        .boxes3{
+            background-color: blue;
+            width: 100%;
+            height: 50px;
+            margin: 20px;
+        }
+        #mydiv{
+            display: flex;
+        }
+        .fadein{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="mydiv"><button class="fadein">Fade Toggle</button></div>
+        <div class="boxes"></div>
+        <div class="boxes2"></div>
+        <div class="boxes3"></div>
+    </div>
+    <script>
+        $(document).ready(function () {
+
+            $('.fadein').click(function () {
+                $('.boxes').fadeToggle(1000)
+                $('.boxes2').fadeToggle(2000)
+                $('.boxes3').fadeToggle(3000)
+            })
+        })
+    </script>
+</body>
+</html>
