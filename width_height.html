@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <style>
+        .container{
+            padding: 100px;
+        }
+        #rectangle{
+            width: 500px;
+            height: 400px;
+            background-color: blue;
+            border: 10px solid red;
+        }
+        .btn, input{
+            margin: 0 auto;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="rectangle"></div>
+        <br>
+        <button class="btn">Click Me</button>
+        <br><br>
+        <input placeholder="it will display the height" id="height" style="width: 250px;"><br>
+        <input placeholder="it will display the width" id="width"  style="width: 250px;">
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('.btn').click(function(){
+                let x = "";
+                let y = "";
+
+                x ="The width of the rectangle is " +  x + $('#rectangle').width() + " px"
+                y ="The width of the rectangle is " +  y + $('#rectangle').height() + " px"
+
+                $('#height').val(y)
+                $('#width').val(x)
+
+            })
+        })
+    </script>
+</body>
+
+</html>
